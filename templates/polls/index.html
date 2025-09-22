@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+  body {
+    background: linear-gradient(135deg, #667eea, #764ba2); /* purple-blue */
+    min-height: 100vh;
+  }
+
+  .poll-box {
+    background: #ffffffcc;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .poll-option {
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #764ba2;
+    transition: 0.3s;
+  }
+
+  .poll-option:hover {
+    background: #764ba2;
+    color: white;
+    cursor: pointer;
+  }
+
+  .btn-vote {
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    border: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .btn-vote:hover {
+    transform: scale(1.05);
+  }
+</style>
+
+<div class="container py-5">
+  <div class="poll-box">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold text-primary">🗳️ Student Polls</h2>
+      <p class="text-muted">Vote anonymously and make your voice count!</p>
+    </div>
+
+    {% for poll in polls %}
+    <form method="POST" class="mb-5">
+      <input type="hidden" name="poll_id" value="{{ poll.id }}">
+      <h4 class="fw-bold">{{ poll.question }}</h4>
+
+      <div class="form-check poll-option">
+        <input class="form-check-input" type="radio" name="option" value="{{ poll.option1 }}" required>
+        <label class="form-check-label">{{ poll.option1 }}</label>
+      </div>
+
+      <div class="form-check poll-option">
+        <input class="form-check-input" type="radio" name="option" value="{{ poll.option2 }}">
+        <label class="form-check-label">{{ poll.option2 }}</label>
+      </div>
+
+      {% if poll.option3 %}
+      <div class="form-check poll-option">
+        <input class="form-check-input" type="radio" name="option" value="{{ poll.option3 }}">
+        <label class="form-check-label">{{ poll.option3 }}</label>
+      </div>
+      {% endif %}
+
+      {% if poll.option4 %}
+      <div class="form-check poll-option">
+        <input class="form-check-input" type="radio" name="option" value="{{ poll.option4 }}">
+        <label class="form-check-label">{{ poll.option4 }}</label>
+      </div>
+      {% endif %}
+
+      <div class="text-center mt-3">
+        <button type="submit" class="btn btn-vote px-4">Submit Vote ✅</button>
+      </div>
+    </form>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

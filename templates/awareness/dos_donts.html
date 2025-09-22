@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="p-5 mb-4 bg-danger text-white rounded shadow">
+  <h1 class="display-5 fw-bold"><i class="bi bi-check2-circle"></i> Do’s & Don’ts</h1>
+  <p class="fs-5">Follow these simple guidelines to stay safe and support your peers.</p>
+</div>
+
+<div class="row g-4">
+  <div class="col-md-6">
+    <div class="card border-success shadow h-100">
+      <img src="{{ url_for('static', filename='img/dos.jpg') }}" class="card-img-top" alt="Do's">
+      <div class="card-body">
+        <h5 class="card-title text-success">✅ Do’s</h5>
+        <ul>
+          <li>Report ragging incidents immediately.</li>
+          <li>Save emergency helpline numbers.</li>
+          <li>Support and protect your peers.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card border-danger shadow h-100">
+      <img src="{{ url_for('static', filename='img/donts.jpg') }}" class="card-img-top" alt="Don'ts">
+      <div class="card-body">
+        <h5 class="card-title text-danger">❌ Don’ts</h5>
+        <ul>
+          <li>Don’t ignore or stay silent.</li>
+          <li>Don’t participate in ragging activities.</li>
+          <li>Don’t blame victims.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

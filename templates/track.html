@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Track Complaint</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 25px;
+      width: 500px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .info {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #ffeb3b;
+    }
+    a.proof-link {
+      display: inline-block;
+      margin-top: 10px;
+      background: #ffeb3b;
+      color: #000;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a.proof-link:hover {
+      background: #ffc107;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>📌 Complaint Details</h2>
+    <div class="info"><span class="highlight">Complaint ID:</span> {{ complaint.id }}</div>
+    <div class="info"><span class="highlight">Subject:</span> {{ complaint.subject }}</div>
+    <div class="info"><span class="highlight">Severity:</span> {{ complaint.severity }}</div>
+    <div class="info"><span class="highlight">Details:</span> {{ complaint.details }}</div>
+    <div class="info"><span class="highlight">Status:</span> {{ complaint.status }}</div>
+    <div class="info"><span class="highlight">Date:</span> {{ complaint.date.strftime('%Y-%m-%d %H:%M:%S') }}</div>
+
+    {% if complaint.proof_file %}
+      <div class="info">
+        <span class="highlight">Proof:</span>
+        <a href="{{ url_for('static', filename=complaint.proof_file.split('static/')[-1]) }}" target="_blank" class="proof-link">View / Download Proof</a>
+      </div>
+    {% else %}
+      <div class="info"><span class="highlight">Proof:</span> No proof uploaded</div>
+    {% endif %}
+  </div>
+</body>
+</html>

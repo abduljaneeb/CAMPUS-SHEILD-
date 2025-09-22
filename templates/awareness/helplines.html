@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="p-5 mb-4 bg-success text-white rounded shadow">
+  <h1 class="display-5 fw-bold"><i class="bi bi-telephone"></i> Helplines</h1>
+  <p class="fs-5">Reach out for support anytime. Save these numbers and emails for emergencies.</p>
+</div>
+
+<div class="row g-4 mb-5">
+  <div class="col-md-6">
+    <div class="card shadow h-100 text-center">
+      <img src="{{ url_for('static', filename='img/helpline_poster.jpg') }}" class="card-img-top" alt="Helpline Poster">
+      <div class="card-body">
+        <h5 class="card-title">National Helpline</h5>
+        <p class="text-muted">📞 1800-180-5522</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card shadow h-100 text-center">
+      <div class="card-body">
+        <h5 class="card-title">College Anti-Ragging Cell</h5>
+        <p class="text-muted">📞 +91-9876543210</p>
+        <p class="text-muted">📧 janeebkonami@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

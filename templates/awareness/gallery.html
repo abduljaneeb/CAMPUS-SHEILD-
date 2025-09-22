@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="gallery-header bg-warning text-dark rounded shadow p-4 mb-4 text-center">
+    <h1 class="fw-bold">📢 Anti-Ragging Awareness Gallery</h1>
+    <p class="lead">Beautiful posters and campaigns against ragging — simple enough that even children can understand.</p>
+  </div>
+
+  <div class="row g-4">
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card gallery-card h-100">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=60"
+             class="card-img-top" alt="Say No to Ragging">
+        <div class="card-body text-center">
+          <h5 class="card-title text-danger">Say No to Ragging</h5>
+          <p class="card-text">Respect your peers. Say no to bullying and ragging.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card gallery-card h-100">
+        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=60"
+             class="card-img-top" alt="Ragging is a Crime">
+        <div class="card-body text-center">
+          <h5 class="card-title text-primary">Ragging is a Crime</h5>
+          <p class="card-text">Strict legal actions will be taken against ragging.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card gallery-card h-100">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=60"
+             class="card-img-top" alt="Friendly Campus">
+        <div class="card-body text-center">
+          <h5 class="card-title text-success">Friendly Campus</h5>
+          <p class="card-text">Build friendships, not fear. A ragging-free campus is a happy campus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4 mt-2">
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card gallery-card h-100">
+        <img src="https://images.unsplash.com/photo-1487528278747-ba99ed528ebc?auto=format&fit=crop&w=800&q=60"
+             class="card-img-top" alt="Spread Awareness">
+        <div class="card-body text-center">
+          <h5 class="card-title text-warning">Spread Awareness</h5>
+          <p class="card-text">Join hands to stop ragging and protect every student.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card gallery-card h-100">
+        <img src="https://images.unsplash.com/photo-1558021212-51b6ecfa0db9?auto=format&fit=crop&w=800&q=60"
+             class="card-img-top" alt="Unity Against Ragging">
+        <div class="card-body text-center">
+          <h5 class="card-title text-info">Unity Against Ragging</h5>
+          <p class="card-text">Together we can end ragging and build safer campuses.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card gallery-card h-100">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=60"
+             class="card-img-top" alt="Safe Environment">
+        <div class="card-body text-center">
+          <h5 class="card-title text-dark">Safe Environment</h5>
+          <p class="card-text">Campuses should be places of learning, not fear.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .gallery-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease-in-out;
+  }
+  .gallery-card:hover {
+    transform: scale(1.03);
+  }
+  .gallery-card img {
+    height: 220px;
+    object-fit: cover;
+  }
+</style>
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container py-4">
+
+  <!-- Header -->
+  <div class="bg-danger text-white rounded shadow p-4 mb-4 text-center">
+    <h1 class="fw-bold">🚫 Anti-Ragging Laws & Guidelines</h1>
+    <p class="lead">Know your rights and responsibilities — stay safe, respectful, and ragging-free!</p>
+  </div>
+
+  <!-- Law Highlights -->
+  <div class="row g-4">
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card text-center h-100 border-0 shadow-lg bg-light">
+        <div class="card-body">
+          <h3 class="text-danger fw-bold">📜 UGC Guidelines</h3>
+          <p class="card-text">
+            The <strong>UGC</strong> mandates strict action against ragging — suspension, expulsion, or rustication.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card text-center h-100 border-0 shadow-lg bg-light">
+        <div class="card-body">
+          <h3 class="text-primary fw-bold">⚖️ Legal Action</h3>
+          <p class="card-text">
+            Ragging is a <strong>punishable crime</strong> under IPC Sections 323, 341, 506. Offenders face jail time.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card text-center h-100 border-0 shadow-lg bg-light">
+        <div class="card-body">
+          <h3 class="text-success fw-bold">🏫 Campus Rules</h3>
+          <p class="card-text">
+            Every college must form an <strong>Anti-Ragging Committee</strong> and provide helpline numbers to students.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Awareness Poster -->
+  <div class="my-5 text-center">
+    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1000&q=60"
+         alt="Say No to Ragging" class="img-fluid rounded shadow-lg">
+    <p class="mt-3 fw-bold text-dark">“Respect is Strength. Ragging is Weakness.”</p>
+  </div>
+
+  <!-- Steps Section -->
+  <div class="bg-warning text-dark rounded p-4 shadow-lg">
+    <h2 class="fw-bold mb-3">🛡️ What To Do If You Face Ragging?</h2>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">📞 Call the <strong>24x7 National Anti-Ragging Helpline: 1800-180-5522</strong></li>
+      <li class="list-group-item">✉️ Email your complaint to <strong>helpline@antiragging.in</strong></li>
+      <li class="list-group-item">🏫 Report immediately to your <strong>college Anti-Ragging Committee</strong></li>
+      <li class="list-group-item">⚖️ If ignored, file a <strong>police complaint</strong> under IPC laws.</li>
+    </ul>
+  </div>
+
+</div>
+
+<style>
+  .list-group-item {
+    font-size: 1.1rem;
+    border: none;
+    background: #fff8e1;
+    margin-bottom: 8px;
+    border-radius: 8px;
+  }
+</style>
+
+{% endblock %}

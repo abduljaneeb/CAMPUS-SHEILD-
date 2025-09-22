@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Full Background -->
+<div class="awareness-bg py-5">
+
+  <!-- Hero Section -->
+  <div class="container text-center text-white mb-5">
+    <h1 class="fw-bold display-4">🌟 Awareness Hub</h1>
+    <p class="lead">Learn, stay safe, and create a ragging-free campus together.</p>
+  </div>
+
+  <!-- Cards Section -->
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Laws -->
+      <div class="col-md-4">
+        <a href="{{ url_for('awareness_page', page='laws') }}" class="text-decoration-none">
+          <div class="card shadow-lg border-0 h-100 hover-card">
+            <div class="card-body text-center">
+              <h2 class="text-primary">📘 Anti-Ragging Laws</h2>
+              <p>Strict rules and legal actions against ragging.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Helplines -->
+      <div class="col-md-4">
+        <a href="{{ url_for('awareness_page', page='helplines') }}" class="text-decoration-none">
+          <div class="card shadow-lg border-0 h-100 hover-card">
+            <div class="card-body text-center">
+              <h2 class="text-success">📞 Helplines</h2>
+              <p>Find emergency numbers and support contacts.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Do’s & Don’ts -->
+      <div class="col-md-4">
+        <a href="{{ url_for('awareness_page', page='dos_donts') }}" class="text-decoration-none">
+          <div class="card shadow-lg border-0 h-100 hover-card">
+            <div class="card-body text-center">
+              <h2 class="text-danger">✅ Do’s & Don’ts</h2>
+              <p>Important guidelines to stay safe on campus.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Gallery -->
+      <div class="col-md-6">
+        <a href="{{ url_for('awareness_page', page='gallery') }}" class="text-decoration-none">
+          <div class="card shadow-lg border-0 h-100 hover-card">
+            <div class="card-body text-center">
+              <h2 class="text-warning">🖼️ Gallery</h2>
+              <p>View awareness posters and campaign images.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Videos -->
+      <div class="col-md-6">
+        <a href="{{ url_for('awareness_page', page='videos') }}" class="text-decoration-none">
+          <div class="card shadow-lg border-0 h-100 hover-card">
+            <div class="card-body text-center">
+              <h2 class="text-info">🎥 Videos</h2>
+              <p>Watch awareness videos and student campaigns.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Custom CSS -->
+<style>
+  /* Full page gradient background */
+  .awareness-bg {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Card styling */
+  .hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    background: white;
+  }
+  .hover-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-body h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .lead {
+    font-size: 1.3rem;
+  }
+</style>
+
+{% endblock %}

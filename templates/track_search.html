@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+  body {
+    background: linear-gradient(135deg, #f6d365, #fda085); /* orange-peach */
+    min-height: 100vh;
+  }
+
+  .search-box {
+    background: #ffffffcc;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-search {
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    border: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .btn-search:hover {
+    background: linear-gradient(90deg, #ee0979, #ff6a00);
+    transform: scale(1.05);
+  }
+</style>
+
+<div class="container py-5">
+  <div class="search-box text-center">
+    <h2 class="fw-bold text-warning">🔎 Track Your Complaint</h2>
+    <p class="text-muted">Enter your Complaint ID to check the status.</p>
+
+    <form method="POST" class="mt-4">
+      <div class="mb-3">
+        <input type="number" name="complaint_id" class="form-control" placeholder="Enter Complaint ID" required>
+      </div>
+      <button type="submit" class="btn btn-search px-4">Search</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
